@@ -127,8 +127,8 @@ analisis_twitter <- function(palabras_clave){
   #===============================================================
 
   #Variables envío JSON a plataforma
-  TB_token <- "token_twitter_tech"
-  TB_url   <- paste("http://88.99.184.239:8080/api/v1/",TB_token,"/telemetry",sep="")
+  TB_token <- "EgnvK4lRan7zqceS7LfC"
+  TB_url   <- paste("http://94.130.77.253:8080/api/v1/",TB_token,"/telemetry",sep="")
 
   json_twitter_return <- toJSON(data_frame_resultado,pretty=T)
 
