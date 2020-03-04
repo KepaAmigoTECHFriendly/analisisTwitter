@@ -20,6 +20,7 @@
 #' @export
 #'
 
+
 analisis_twitter <- function(palabras_clave){
 
   #Parametros de configuracion
@@ -54,7 +55,7 @@ analisis_twitter <- function(palabras_clave){
   {
     Sys.sleep(6)
 
-    tuits_q <- rtweet::search_tweets(q=config_strings[i],lang = "es", n=500,include_rts=TRUE,retryonratelimit = TRUE)
+    tuits_q <- rtweet::search_tweets(q=config_strings[i],lang = "es", n=500,include_rts=TRUE,retryonratelimit = TRUE, since = Sys.Date())
 
     # Comprobación de falta de datos
     if(nrow(tuits_q) == 0){
@@ -120,8 +121,6 @@ analisis_twitter <- function(palabras_clave){
   data_frame_resultado[data_frame_resultado==""] <- "-"
   data_frame_resultado[data_frame_resultado==" "] <- "-"
   data_frame_resultado[is.na(data_frame_resultado)] <- "-"
-
-  return(data_frame_resultado)
 
 
   #===============================================================
