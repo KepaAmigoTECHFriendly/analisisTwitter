@@ -62,8 +62,8 @@ analisis_twitter_ce <- function(centros_empresa){
   #===============================================================
 
   #Variables envío JSON a plataforma
-  TB_token <- "H08oKp9F5Rip3BdC17l3"
-  TB_url   <- paste("http://94.130.77.253:8080/api/v1/",TB_token,"/telemetry",sep="")
+  TB_token <- "9vIrujfnOkivmp139pzC"
+  TB_url   <- paste("http://78.47.39.122:8080/api/v1/",TB_token,"/telemetry",sep="")
 
   json_twitter_return <- toJSON(data_frame_resultado,pretty=T)
 
